@@ -78,7 +78,7 @@ function copy(apple){
     console.log(appleCopy);
     return appleCopy;
 }    
-// console.log(copy);
+ console.log(copy);
 
 
 
@@ -103,7 +103,7 @@ else {
 }
 
 }
-// console.log(is31Flavors(fruits));
+console.log(is31Flavors(fruits));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -123,7 +123,7 @@ function addFlavor(flavors, newflavor){
     
    return flavors;
 }
-// console.log(addFlavor(originalFlavors,"Rainbow Sherbert"));
+console.log(addFlavor(originalFlavors,"Rainbow Sherbert"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -140,7 +140,7 @@ function removeLastFlavor(flavors){
    flavors.pop();
    return flavors
 }
-// console.log(removeLastFlavor(fruits));
+console.log(removeLastFlavor(fruits));
 
 
 
@@ -160,7 +160,7 @@ function getFlavorByIndex(candy, index){
 
 }
 
-// console.log(getFlavorByIndex(fruits,4));
+console.log(getFlavorByIndex(fruits,4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -186,7 +186,7 @@ function removeFlavorByName(dessert, flavor){
    return dessert;
 }
 
-// console.log(removeFlavorByName(originalFlavors,'Coffee'));
+console.log(removeFlavorByName(originalFlavors,'Coffee'));
 
 
 
