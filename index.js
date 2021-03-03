@@ -35,6 +35,31 @@ const originalFlavors = [
     "Vanilla Burnt Almond"
 ]
 
+const fruits = [
+    
+    
+    
+    "Chocolate",
+    "Chocolate Almond",
+    "Chocolate Chip",
+    "Chocolate Fudge",
+    "Chocolate Mint",
+    "Chocolate Ribbon",
+    "Coffee",
+    "Coffee Candy",
+    "Date Nut",
+    "Eggnog",
+    "French Vanilla",
+    "Green Mint Stick",
+    "Lemon Crisp",
+    "Lemon Custard",
+    "Lemon Sherbet"
+   
+    
+ 
+    
+]
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be reading and writing data to this array.  
 With all of these changes going on, we don't want to lose track of the actual, original 31 flavors.  So we need to copy the original array!
@@ -45,10 +70,15 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(apple){
+    let appleCopy = []
+    for (let i=0; i<apple.length;i++){
+        appleCopy.push(apple[i])
+    }
+    console.log(appleCopy);
+    return appleCopy;
 }    
-
+ console.log(copy);
 
 
 
@@ -64,10 +94,16 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(bannana){
+   if (bannana.length == 31){
+       return true;
+   }
+else {
+    return false;
 }
 
+}
+console.log(is31Flavors(fruits));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -81,10 +117,13 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(flavors, newflavor){
+    
+        flavors.push(newflavor);
+    
+   return flavors;
 }
-
+console.log(addFlavor(originalFlavors,"Rainbow Sherbert"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -97,9 +136,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(flavors){
+   flavors.pop();
+   return flavors
 }
+console.log(removeLastFlavor(fruits));
 
 
 
@@ -114,9 +155,12 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(candy, index){
+    return candy[index];
+
 }
+
+console.log(getFlavorByIndex(fruits,4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -134,9 +178,15 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(dessert, flavor){
+   var i=dessert.indexOf(flavor);
+   if (i>-1) {
+       dessert.splice(i,1);
+   }
+   return dessert;
 }
+
+console.log(removeFlavorByName(originalFlavors,'Coffee'));
 
 
 
@@ -160,9 +210,22 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(sweets, Vanilla){
+    let index = [];
+    let filteredArray = [];
+    var i;
+    for (let i=0; i<sweets.length;i++){
+         i=sweets.indexOf(Vanilla);
+        index.push(i);
+    }
+    for (let i=0; i<index.length;i++){
+        filteredArray.push(i);
+        
+   } 
+   return filteredArray;
 }
+
+console.log(filterByWord(fruits, 'Chocolate'));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
